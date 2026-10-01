@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="64" viewBox="0 0 96 64">
+  <g stroke="#493126" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="71" cy="35" rx="12" ry="9" transform="rotate(-22 71 35)" fill="#876448"/>
+    <path d="m64 31 14 7m-11-12 7 16m-11-7 14-4" fill="none" stroke-width="1"/>
+    <ellipse cx="44" cy="33" rx="23" ry="15" fill="#a17852"/>
+    <circle cx="28" cy="13" r="7" fill="#a17852"/>
+    <circle cx="57" cy="13" r="7" fill="#a17852"/>
+    <ellipse cx="42" cy="25" rx="20" ry="18" fill="#a17852"/>
+    <ellipse cx="42" cy="32" rx="12" ry="9" fill="#ecd7ae"/>
+    <path d="M38 33h8v9h-8z" fill="#fff8ea"/>
+    <path d="M42 34v7" fill="none" stroke-width="1"/>
+    <path d="M32 39q-6 2-8-1m28 1q6 2 8-1" fill="none"/>
+    <rect x="16" y="46" width="64" height="17" rx="8" fill="#fff8ea"/>
+  </g>
+  <g fill="#493126"><circle cx="34" cy="24" r="2"/><circle cx="50" cy="24" r="2"/><ellipse cx="42" cy="30" rx="4" ry="2.5"/></g>
+  <text x="48" y="59" text-anchor="middle" fill="#263942" font-family="Arial, sans-serif" font-size="13" font-weight="700">Close</text>
+</svg>
