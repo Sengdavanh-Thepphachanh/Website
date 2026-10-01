@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  /* ===== Shared visual identity (matches the per-company CV templates) =====
+     serif body · sans section labels + meta · slate accent · A4 print.
+     Self-contained: system fonts only, no external fetch. */
+  :root {
+    --ink: #1c1c1c;
+    --muted: #56606a;
+    --rule: #d7dbe0;
+    --accent: #2f4858;
+    --serif: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--serif);
+    color: var(--ink);
+    font-size: 11.2pt;
+    line-height: 1.5;
+    background: #f4f4f4;
+  }
+
+  .sheet {
+    background: #fff;
+    max-width: 210mm;
+    margin: 24px auto;
+    padding: 20mm 20mm 18mm;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+
+  /* Name */
+  .doc h1 {
+    font-size: 23pt;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    line-height: 1.1;
+    margin: 0 0 2px;
+    color: var(--ink);
+  }
+  /* Headline (first <p> after the name) */
+  .doc h1 + p {
+    font-family: var(--sans);
+    font-size: 11.5pt;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 0 0 6px;
+  }
+  /* Contact line (second <p>) */
+  .doc h1 + p + p {
+    font-family: var(--sans);
+    font-size: 9.6pt;
+    line-height: 1.45;
+    color: var(--muted);
+    margin: 0 0 4px;
+  }
+
+  .doc h2 {
+    font-family: var(--sans);
+    font-size: 10.8pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin: 14px 0 7px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .doc h3 {
+    font-size: 12pt;
+    font-weight: 700;
+    margin: 10px 0 1px;
+  }
+
+  /* Sub-role heading inside a grouped company block (e.g. LabTwin under Labforward) */
+  .doc h4 {
+    font-family: var(--sans);
+    font-size: 10.6pt;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 9px 0 1px;
+  }
+  .doc h4 em {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 0.9em;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .doc p { margin: 0 0 8px; }
+  .doc p em { color: var(--muted); font-style: italic; }
+
+  .doc ul { margin: 4px 0 8px; padding-left: 1.15em; }
+  .doc li { margin: 0 0 3px; }
+
+  .doc hr {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 10px 0;
+  }
+
+  .doc strong { font-weight: 700; }
+
+  @media screen and (max-width: 600px) {
+    .sheet { margin: 12px; padding: 24px; }
+    .doc { overflow-wrap: anywhere; }
+  }
+
+  @page { size: A4; margin: 14mm 14mm 15mm; }
+
+  @media print {
+    html, body { background: #fff; }
+    body {
+      font-size: 9.2pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .sheet { max-width: none; margin: 0; padding: 0; box-shadow: none; }
+    .doc h1 { font-size: 17.5pt; }
+    .doc h2 { font-size: 9.9pt; break-after: avoid; page-break-after: avoid; }
+    .doc h3 { font-size: 10.9pt; break-after: avoid; page-break-after: avoid; }
+    .doc h4 { font-size: 10.6pt; break-after: avoid; page-break-after: avoid; }
+    .doc ul, .doc li { break-inside: avoid; page-break-inside: avoid; }
+    .doc p { orphans: 3; widows: 3; }
+    a { color: var(--accent); }
+    /* Add class="cv-page-break-before" to an <h3> to force a clean page break */
+    .cv-page-break-before { break-before: page; page-break-before: always; margin-top: 0; }
+  }
+</style><title>Dr. Sengdavanh Thepphachanh · CV</title></head>
+<body>
+<article class="sheet doc">
+
+<h1>Dr. Sengdavanh Thepphachanh</h1>
+<p>Scientific researcher · TU Dresden</p>
+<p>Dresden, Germany &nbsp;·&nbsp; <a href="index.html">Portfolio</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/sengdavanh-thepphachanh-7234b1b6/">LinkedIn</a> &nbsp;·&nbsp; <a href="https://orcid.org/0000-0003-0986-9952">ORCID</a></p>
+<hr>
+
+<h2>Profile</h2>
+<p>Scientific researcher at TU Dresden, from Laos and now based in Dresden. Research focuses on river habitat modelling and hydraulic processes in freshwater ecosystems.</p>
+<hr>
+
+<h2>Research</h2>
+<h3>CLANCY · Chinese mitten crab control</h3>
+<p><em>2023–2028 · EU Interreg North Sea</em></p>
+<p>The project develops and tests traps for invasive Chinese mitten crabs. TU Dresden investigates how crabs respond to currents and hydraulic barriers. <a href="https://tu-dresden.de/bu/bauingenieurwesen/iwd/wasserbau/forschung/forschungsprojekte/clancy">Project record</a></p>
+
+<h3>BIBOB · Beaver dams and water management</h3>
+<p><em>2025–2027 · EU Interreg Saxony–Czech Republic</em></p>
+<p>The project studies beaver dams and their effects on water retention. The team develops practical dam management guidance for the Saxon-Czech border region. <a href="https://tu-dresden.de/bu/bauingenieurwesen/iwd/wasserbau/bibob/projekt/profil">Project record</a></p>
+
+<hr>
+
+<h2>Experience</h2>
+
+<h3>Scientific researcher · TU Dresden</h3>
+<p><em>April 2023–present · Dresden, Germany</em></p>
+<p>Research on river habitat modelling and hydraulic modelling, including the CLANCY and BIBOB projects.</p>
+
+<h3>Lecturer/researcher · National University of Laos</h3>
+<p><em>December 2015–August 2019 · Vientiane, Laos</em></p>
+
+<h3>Environmental engineer · Archineer Associates</h3>
+<p><em>March 2017–July 2019 · Part-time · Laos</em></p>
+<hr>
+
+<h2>Skills</h2>
+<p>Computational Fluid Dynamics (CFD) · Habitat modelling · Hydraulic modelling</p>
+<hr>
+
+<h2>Education</h2>
+<p><strong>Doctor of Engineering · Hydraulic Engineering</strong><br>Technische Universität Dresden<br><em>Dissertation defended in 2023.</em><br>Dissertation: Transient River Habitat Modeling for Macrozoobenthos in Hydrologically Dynamic Running Waters.<br><a href="https://tud.qucosa.de/id/qucosa%3A90334">Dissertation record</a></p>
+<p><strong>Master’s degree · Environmental Engineering</strong><br>University of the Philippines Diliman · 2013–2015</p>
+<hr>
+
+<h2>Publications</h2>
+<p><strong>Macrozoobenthos habitat suitability and connectivity under hydromorphological and climate stressors</strong><br>Sengdavanh Thepphachanh, Manuel Wewer, Jürgen Stamm, Venu Chandra<br><em>Article · September 2026 · Ecological Indicators</em><br><a href="https://www.researchgate.net/publication/413813401_Macrozoobenthos_habitat_suitability_and_connectivity_under_hydromorphological_and_climate_stressors">ResearchGate</a> &nbsp;·&nbsp; <a href="https://fis.tu-dresden.de/portal/de/publications/macrozoobenthos-habitat-suitability-and-connectivity-under-hydromorphological-and-climate-stressors%2873c3dc61-bd50-4906-a53a-476daaadbd59%29.html">TU Dresden record</a></p>
+
+<p><strong>A hydrodynamic analysis of a Chinese mitten crab trap using 3D modeling</strong><br>Sengdavanh Thepphachanh, Torsten Heyer<br><em>Conference paper · November 2025 · 41st IAHR World Congress</em><br><a href="https://www.researchgate.net/publication/397988920_A_HYDRODYNAMIC_ANALYSIS_OF_A_CHINESE_MITTEN_CRAB_TRAP_USING_3D_MODELING">ResearchGate</a></p>
+
+<p><strong>An evaluation of small river restoration using transient river habitat modelling for macrozoobenthos</strong><br>Sengdavanh Thepphachanh, Jürgen Stamm<br><em>Article · June 2024 · First published online · Journal of Ecohydraulics</em><br><a href="https://doi.org/10.1080/24705357.2024.2363766">Article</a> &nbsp;·&nbsp; <a href="https://www.researchgate.net/publication/381852601_An_evaluation_of_small_river_restoration_using_transient_river_habitat_modelling_for_macrozoobenthos">ResearchGate</a></p>
+
+<p><strong>Chapter 22: Transient habitat simulation for macroinvertebrates in running waters – an assessment tool for hydromorphological river restoration</strong><br>Sengdavanh Thepphachanh, Jürgen Stamm<br><em>Book chapter · June 2024</em><br><a href="https://www.researchgate.net/publication/381654504_CHAPTER_22_TRANSIENT_HABITAT_SIMULATION_FOR_MACROINVERTEBRATES_IN_RUNNING_WATERS_-_AN_ASSESSMENT_TOOL_FOR_HYDROMORPHOLOGICAL_RIVER_RESTORATION">ResearchGate</a></p>
+
+<p><strong>Spatiotemporal Connectivity of Macrozoobenthos Habitat - a Modeling Approach</strong><br>Sengdavanh Thepphachanh, Jürgen Stamm<br><em>Conference paper · 2023 · 40th IAHR World Congress</em><br><a href="https://www.iahr.org/library/infor?pid=29525">IAHR record</a> &nbsp;·&nbsp; <a href="https://www.researchgate.net/publication/375805981_Spatiotemporal_Connectivity_of_Macrozoobenthos_Habitat_-_a_Modeling_Approach">ResearchGate</a></p>
+
+<p><strong>Development of transient habitat modeling for stream Macrozoobenthos</strong><br>Sengdavanh Thepphachanh, Jürgen Stamm<br><em>Article · December 2022 · First published online · River Research and Applications · 39(4), 745–757 (2023)</em><br><a href="https://doi.org/10.1002/rra.4090">Article</a> &nbsp;·&nbsp; <a href="https://www.researchgate.net/publication/366124597_Development_of_transient_habitat_modeling_for_stream_Macrozoobenthos">ResearchGate</a> &nbsp;·&nbsp; <a href="https://www.researchgate.net/publication/360492860_Development_of_Transient_Habitat_Modeling_for_Macrozoobenthos_in_a_Restored_Stream">May 2022 preprint</a> &nbsp;·&nbsp; <a href="https://www.researchgate.net/publication/363489630_Development_of_Transient_Habitat_Modeling_for_Macrozoobenthos_in_a_Restored_Stream">September 2022 preprint</a><br><em>The linked preprints are earlier versions titled Development of Transient Habitat Modeling for Macrozoobenthos in a Restored Stream.</em></p>
+
+<p><strong>Transient physical habitat modelling - simulation of stream macrozoobenthos habitat suitability using fuzzy logic approach</strong><br>Sengdavanh Thepphachanh, Jürgen Stamm<br><em>Conference paper · July 2021 · 9th International Symposium on Environmental Hydraulics</em><br><a href="https://www.researchgate.net/publication/360188831_Transient_physical_habitat_modelling_-simulation_of_stream_macrozoobenthos_habitat_suitability_using_fuzzy_logic_approach">ResearchGate</a></p>
+
+<p><strong>Rethinking urbanization: should urban transformation be directed into agglomerated urban?</strong><br>Matthew Thaokhamlue, Sengdavanh Thepphachanh<br><em>Research · April 2021</em><br><a href="https://www.researchgate.net/publication/351082080_RETHINKING_URBANIZATION_SHOULD_URBAN_TRANSFORMATION_BE_DIRECTED_INTO_AGGLOMERATED_URBAN">ResearchGate</a></p>
+
+</article>
+</body>
+</html>
