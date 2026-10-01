@@ -46,6 +46,11 @@ The CV preserves the serif body, sans section labels, slate accent, A4 sheet, an
 
 The approved background is stored unchanged as `assets/images/hero.png`.
 
+The index uses Fraunces for headings and publication titles, and Sora for body text.
+Both variable fonts come from [Google Fonts](https://fonts.google.com/) and are served from `assets/fonts/`.
+The fonts use the SIL Open Font License 1.1, included as `OFL-Fraunces.txt` and `OFL-Sora.txt`.
+Font fallbacks remain available while the local WOFF2 files load. The CV keeps its existing system fonts.
+
 The publications use the supplied ResearchGate links and linked publisher, IAHR, and TU Dresden records.
 The 2023 connectivity paper follows the IAHR record rather than the copied ResearchGate date.
 Online publication dates remain distinct from later journal issue dates.

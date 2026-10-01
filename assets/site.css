@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Fraunces";
+  src: url("fonts/fraunces-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("fonts/sora-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+}
+
 :root {
   color-scheme: light;
   --header-height: 88px;
@@ -11,7 +27,9 @@
   --yellow: #ffc23c;
   --green: #00b76d;
   --coral: #ff695c;
-  font-family: Arial, Helvetica, sans-serif;
+  --heading-font: "Fraunces", Georgia, serif;
+  font-family: "Sora", Arial, Helvetica, sans-serif;
+  font-weight: 400;
   color: var(--ink);
   background: var(--paper);
 }
@@ -22,6 +40,7 @@ body { margin: 0; }
 body:has(dialog[open]) { overflow: hidden; }
 button, a { -webkit-tap-highlight-color: transparent; }
 button { font: inherit; color: inherit; }
+h1, h2, .publication-caption .tile-title { font-family: var(--heading-font); font-optical-sizing: auto; }
 a { color: inherit; text-underline-offset: 5px; }
 img { display: block; max-width: 100%; height: auto; }
 button:focus-visible, a:focus-visible { outline: 3px solid var(--red); outline-offset: 5px; }
@@ -44,7 +63,7 @@ nav a:hover, .footer-links a:hover { text-decoration: underline; }
 .hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 52% 48%; min-height: inherit; }
 .hero-copy { grid-column: 2; display: flex; flex-direction: column; justify-content: center; padding: 48px 36px; background: var(--paper); }
 .hero-eyebrow { margin: 0 0 26px; font-size: 13px; line-height: 1.6; letter-spacing: .07em; text-transform: uppercase; }
-h1 { margin: 0; font-size: clamp(48px, 5.2vw, 74px); font-weight: 500; line-height: .99; letter-spacing: -.045em; }
+h1 { margin: 0; font-size: clamp(48px, 5.2vw, 74px); font-weight: 500; line-height: 1.04; letter-spacing: -.025em; }
 .hero-focus { margin: 26px 0 0; font-size: 23px; line-height: 1.35; max-width: 400px; }
 .hero-bio { margin: 22px 0 0; max-width: 430px; color: var(--muted); font-size: 17px; line-height: 1.65; }
 .hero-links { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 34px; font-size: 15px; }
@@ -53,14 +72,14 @@ h1 { margin: 0; font-size: clamp(48px, 5.2vw, 74px); font-weight: 500; line-heig
 
 .section { min-height: calc(100svh - var(--header-height)); padding-block: clamp(24px, 3svh, 44px); display: flex; flex-direction: column; justify-content: center; }
 .section-heading { flex: 0 0 auto; display: flex; gap: 30px; align-items: baseline; margin-bottom: 24px; }
-.section-heading h2 { margin: 0; font-size: clamp(36px, 3.2vw, 46px); font-weight: 500; line-height: 1.1; letter-spacing: -.035em; }
+.section-heading h2 { margin: 0; font-size: clamp(36px, 3.2vw, 46px); font-weight: 500; line-height: 1.1; letter-spacing: -.015em; }
 .section-heading p { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.5; }
 .tile { position: relative; border: 0; padding: 0; text-align: left; min-width: 0; cursor: pointer; isolation: isolate; }
 .tile > * { pointer-events: none; }
 .tile:focus-visible { outline-offset: -5px; z-index: 2; }
 .tile-info { position: absolute; z-index: 3; top: 18px; right: 18px; padding: 7px 12px; border: 1px solid rgba(36, 59, 73, .22); border-radius: 20px; background: var(--paper); color: var(--ink); font-size: 12px; font-weight: 600; line-height: 1; }
 .tile-title, .tile-meta, .tile-venue { display: block; }
-.tile-title { font-weight: 500; line-height: 1.15; letter-spacing: -.025em; }
+.tile-title { font-weight: 500; line-height: 1.15; letter-spacing: -.015em; }
 .tile-meta { font-size: 11px; line-height: 1.5; }
 
 .project-scene { position: relative; width: min(100%, calc((100svh - var(--header-height) - 152px) * 1.76776)); margin-inline: auto; }
@@ -70,6 +89,7 @@ h1 { margin: 0; font-size: clamp(48px, 5.2vw, 74px); font-weight: 500; line-heig
 .project-region--clancy { left: 30%; width: 44%; }
 .project-label { position: absolute; top: 8px; left: 12px; display: flex; align-items: center; gap: 9px; padding: 6px 10px; background: rgba(248, 244, 236, .96); border: 1px solid rgba(36, 59, 73, .4); border-radius: 20px; box-shadow: 0 2px 6px rgba(36, 59, 73, .12); font-size: 12px; line-height: 1; }
 .project-label .tile-info { position: static; padding: 0; border: 0; background: transparent; font-size: 11px; font-weight: 400; }
+.project-label strong { font-weight: 600; }
 .animal-highlight { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; overflow: visible; }
 .animal-highlight ellipse { fill: rgba(255, 194, 60, .18); stroke: var(--paper); stroke-width: 3px; vector-effect: non-scaling-stroke; filter: drop-shadow(0 0 2px var(--ink)); }
 .project-region:focus-visible { outline: 0; }
@@ -129,7 +149,7 @@ h1 { margin: 0; font-size: clamp(48px, 5.2vw, 74px); font-weight: 500; line-heig
 
 .site-footer { border-top: 1px solid var(--line); padding: 40px 0 24px; background: #eee9de; }
 .footer-inner { display: flex; justify-content: space-between; gap: 40px; }
-.footer-inner h2 { margin: 0 0 20px; font-size: 32px; font-weight: 500; letter-spacing: -.025em; }
+.footer-inner h2 { margin: 0 0 20px; font-size: 32px; font-weight: 500; letter-spacing: -.015em; }
 .footer-inner p { font-size: 15px; line-height: 1.6; margin: 0 0 20px; }
 .footer-links { display: flex; align-items: start; flex-wrap: wrap; gap: 26px; padding-top: 8px; font-size: 14px; }
 .footer-links a { text-decoration: none; }
@@ -139,7 +159,7 @@ h1 { margin: 0; font-size: clamp(48px, 5.2vw, 74px); font-weight: 500; line-heig
 .reveal-close { position: absolute; top: 18px; right: 20px; display: flex; align-items: center; gap: 12px; background: transparent; border: 1px solid var(--line); padding: 8px 12px; cursor: pointer; font-size: 13px; }
 .reveal-close span { font-size: 22px; line-height: 1; }
 .reveal-kicker { display: block; font-size: 12px; line-height: 1.6; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin-bottom: 20px; }
-.reveal h2 { margin: 0 0 20px; font-size: clamp(28px, 3vw, 38px); line-height: 1.15; font-weight: 500; letter-spacing: -.025em; overflow-wrap: anywhere; }
+.reveal h2 { margin: 0 0 20px; font-size: clamp(28px, 3vw, 38px); line-height: 1.2; font-weight: 500; letter-spacing: -.015em; overflow-wrap: anywhere; }
 .reveal p { font-size: 16px; line-height: 1.65; }
 .reveal .reveal-subtitle { font-size: 22px; line-height: 1.4; }
 .reveal .publication-authors, .reveal .reveal-venue, .reveal .publication-note { font-size: 14px; color: var(--muted); }
